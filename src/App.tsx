@@ -5,7 +5,9 @@ import Home from "./Components/Home/Home";
 function App() {
   return (
     <div>
-      <DarkMode />  {/* teste */}
+      <div className="darkmode-container">
+        <DarkMode /> {/* teste */}
+      </div>
       <Home />
     </div>
   );
