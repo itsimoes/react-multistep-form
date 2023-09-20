@@ -1,9 +1,13 @@
 import "./App.css";
+import DarkMode from "./Components/Darkmode/Darkmode";
 import Home from "./Components/Home/Home";
 
 function App() {
   return (
-    <Home />
+    <div>
+      <DarkMode />  {/* teste */}
+      <Home />
+    </div>
   );
 }
 
