@@ -1,13 +1,17 @@
 :root {
-  --body_background: white;
+  --body_background: hsl(206, 94%, 87%);
   --body_color: black;
   --body_link: navy;
+  --form_background: white;
+  --form_color: hsl(213, 96%, 18%);
 }
 
 [data-theme = "dark"] {
   --body_background: #282c34;
   --body_color: white;
   --body_link: cyan;
+  --form_background:  hsl(213, 96%, 18%);
+  --form_color: white;
 }
 
 body {

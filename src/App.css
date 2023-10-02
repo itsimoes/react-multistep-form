@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.home-container {
+  display: flex;
+  justify-content: center;
+}
+
 .darkmode-container {
   display: flex;
   justify-content: center;
