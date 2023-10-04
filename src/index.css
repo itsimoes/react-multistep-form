@@ -4,6 +4,8 @@
   --body_link: navy;
   --form_background: white;
   --form_color: hsl(213, 96%, 18%);
+  --button_bg_color: hsl(213, 96%, 18%);
+  --button_color: white;
 }
 
 [data-theme = "dark"] {
@@ -12,6 +14,8 @@
   --body_link: cyan;
   --form_background:  hsl(213, 96%, 18%);
   --form_color: white;
+  --button_bg_color: white;
+  --button_color: hsl(213, 96%, 18%);;
 }
 
 body {
@@ -28,4 +32,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p {
+  color: hsl(231, 11%, 63%);
+}
+
+::placeholder {
+  color: hsl(231, 11%, 63%);
+  font-weight: 500;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
 }

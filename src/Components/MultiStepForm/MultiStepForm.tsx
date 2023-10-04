@@ -11,38 +11,69 @@ import Summary from "./Summary";
 //hooks
 import { useForm } from "../../hooks/useForm";
 
+const StyledDiv = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 90px;
+  padding-right: 90px;
+`
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--form_background);
+  color: var(--form_color);
+  width: 80%;
+  border-radius: 2%;
+`;
+const FormContainer = styled.div`
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-left: 90px;
+  padding-right: 90px;
+`;
+
+const Button = styled.button`
+  background-color: var(--button_bg_color);
+  color: var(--button_color);
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 10px 0px;
+  cursor: pointer;
+
+/* CSS */
+
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  outline: none;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+`;
+
+const formComponents = [
+  <YourInfo />,
+  <SelectPlan />,
+  <AddOns />,
+  <Summary />,
+];
+
 const MultiStepForm = () => {
-  const Wrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--body_background);
-    width: 80%;
-  `;
-  const FormContainer = styled.div`
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left:   0px;
-    padding-right: 50px;
-  `;
 
-  const Button = styled.button`
-    background-color: navy;
-    color: white;
-    font-size: 20px;
-    padding: 10px 60px;
-    border-radius: 5px;
-    margin: 10px 0px;
-    cursor: pointer;
-  `;
-
-  const formComponents = [
-    <YourInfo />,
-    <SelectPlan />,
-    <AddOns />,
-    <Summary />,
-  ];
-
-  const { currentStep, currentComponent, changeStep } = useForm(formComponents);
+  const { currentStep, currentComponent, changeStep, isLastStep, isFirstStep } = useForm(formComponents);
 
   return (
     <Wrapper>
@@ -50,14 +81,28 @@ const MultiStepForm = () => {
       <form onSubmit={(e) => changeStep(currentStep + 1, e)}>
         <FormContainer>
           {/* Steps */}
-          { currentComponent }
+          {currentComponent}
         </FormContainer>
-        <Button type="button" value="" onClick={() => changeStep(currentStep - 1)}>
+        <StyledDiv>
+        {!isFirstStep && (
+          <Button
+          type="button"
+          value=""
+          onClick={() => changeStep(currentStep - 1)}
+        >
           Previous Step
         </Button>
-        <Button type="submit" value="">
+        )}
+        {!isLastStep ? (
+          <Button type="submit" value="">
           Next Step
         </Button>
+        ) : (
+          <Button type="button" value="">
+          Send
+        </Button>
+        )}
+        </StyledDiv>
       </form>
     </Wrapper>
   );
