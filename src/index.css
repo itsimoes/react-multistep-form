@@ -9,6 +9,8 @@
   --button_color_hover: hsl(211, 100%, 40%);
   --back_button_color: hsl(213, 96%, 18%);
   --primary_gray: hsl(231, 11%, 63%);
+  --plan_card_bg: white; 
+  --plan_card_bg_hover: hsl(231, 11%, 96%); 
 }
 
 [data-theme="dark"] {
@@ -21,6 +23,8 @@
   --button_color: hsl(213, 96%, 18%);
   --back_button_color: white;
   --button_color_hover: hsl(231, 11%, 63%);
+  --plan_card_bg: #483EFF;
+  --plan_card_bg_hover: #6259FF;
 }
 
 body {

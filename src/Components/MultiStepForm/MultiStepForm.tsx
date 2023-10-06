@@ -67,6 +67,7 @@ const Wrapper = styled.div`
   background-color: var(--form_background);
   color: var(--form_color);
   width: 80%;
+  height: 570px;
   border-radius: 10px;
 `;
 const FormContainer = styled.div`
