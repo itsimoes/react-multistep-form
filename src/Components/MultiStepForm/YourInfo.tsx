@@ -15,7 +15,7 @@ const StyledInput = styled.input`
 
 const StyledText = styled(StyledInput).attrs({ type: 'text' })``
 const StyledEmail = styled(StyledInput).attrs({ type: 'email' })``
-const StyledPhone = styled(StyledInput).attrs({ type: 'tel', pattern:"[0-9]{2}-([0-9]){2}-[0-9]{5}-[0-9]{4}" })`` //pattern não funciona
+const StyledPhone = styled(StyledInput).attrs({ type: 'number' })``
 
 const YourInfo = () => {
   
@@ -29,6 +29,8 @@ const YourInfo = () => {
       <StyledText
         name="name"
         placeholder="e.g. Type your name here..."
+        // required
+        title="This filed is required"
       />
       <label htmlFor="email">Email Address</label>
       <br />
@@ -40,7 +42,9 @@ const YourInfo = () => {
       <br />
       <StyledPhone
         name="phone"            
-        placeholder="e.g. +0 (00) 00000-0000"
+        placeholder="e.g. +1 234 567 890"
+        pattern="+[0-9]{2} [0-9]{3} [0-9]{3} [0-9]{3}"
+        // required
       />
     </>
   );

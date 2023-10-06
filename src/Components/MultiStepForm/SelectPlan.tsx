@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const SelectPlan = () => {
   return (
-    <div>SelectPlan</div>
-  )
-}
+    <>
+      <h1>Select your plan</h1>
+      <p>You have the option of monthly or yearly billing.</p>
+      <br />
+    </>
+  );
+};
 
-export default SelectPlan
+export default SelectPlan;

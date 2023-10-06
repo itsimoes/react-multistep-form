@@ -6,22 +6,27 @@
   --form_color: hsl(213, 96%, 18%);
   --button_bg_color: hsl(213, 96%, 18%);
   --button_color: white;
+  --button_color_hover: hsl(211, 100%, 40%);
+  --back_button_color: hsl(213, 96%, 18%);
+  --primary_gray: hsl(231, 11%, 63%);
 }
 
-[data-theme = "dark"] {
+[data-theme="dark"] {
   --body_background: #282c34;
   --body_color: white;
   --body_link: cyan;
-  --form_background:  hsl(213, 96%, 18%);
+  --form_background: hsl(213, 96%, 18%);
   --form_color: white;
   --button_bg_color: white;
-  --button_color: hsl(213, 96%, 18%);;
+  --button_color: hsl(213, 96%, 18%);
+  --back_button_color: white;
+  --button_color_hover: hsl(231, 11%, 63%);
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,20 +35,20 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 p {
-  color: hsl(231, 11%, 63%);
+  color: var(--primary_gray);
 }
 
 ::placeholder {
-  color: hsl(231, 11%, 63%);
+  color: var(--primary_gray);
   font-weight: 500;
 }
 
 * {
   box-sizing: border-box;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }

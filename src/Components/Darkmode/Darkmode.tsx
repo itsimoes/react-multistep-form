@@ -1,6 +1,6 @@
 import React from "react";
-import { ReactComponent as Sun } from "../../Assets/Images/Sun.svg";
-import { ReactComponent as Moon } from "../../Assets/Images/Moon.svg";
+import { ReactComponent as Sun } from "../../Assets/images/Sun.svg";
+import { ReactComponent as Moon } from "../../Assets/images/Moon.svg";
 import "./style.scss";
 
 const DarkMode = () => {
