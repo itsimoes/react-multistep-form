@@ -13,6 +13,7 @@ import { useForm } from "../../hooks/useForm";
 
 //assets
 import SidebarBg from "../../Assets/images/bg-sidebar-desktop.svg";
+import Steps from "./Steps";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -40,31 +41,6 @@ const StyledRightWrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
   }
-`;
-
-const StyledIndexWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  padding-top: 10px;
-  color: white;
-  font-size: 15px;
-  font-weight: 500;
-
-  .styled_step {
-    color: var(--primary_gray);
-    font-size: 12px;
-  }
-`;
-
-const StyledNumber = styled.div`
-  width: 30px;
-  height: 30px;
-  margin: 10px;
-  border: 2px solid white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 const Wrapper = styled.div`
@@ -137,34 +113,8 @@ const MultiStepForm = () => {
   return (
     <Wrapper>
       <StyledSidebar className="left-wrapper">
-        <StyledIndexWrapper>
-          <StyledNumber>1</StyledNumber>
-          <div>
-            <div className="styled_step">step 1</div>
-            <div>your info</div>
-          </div>
-        </StyledIndexWrapper>
-        <StyledIndexWrapper>
-          <StyledNumber>2</StyledNumber>
-          <div>
-            <div className="styled_step">step 2</div>
-            <div>select plan</div>
-          </div>
-        </StyledIndexWrapper>
-        <StyledIndexWrapper>
-          <StyledNumber>3</StyledNumber>
-          <div>
-            <div className="styled_step">step 3</div>
-            <div>add-ons</div>
-          </div>
-        </StyledIndexWrapper>
-        <StyledIndexWrapper>
-          <StyledNumber>4</StyledNumber>
-          <div>
-            <div className="styled_step">step 4</div>
-            <div>summary</div>
-          </div>
-        </StyledIndexWrapper>
+          <Steps currentStep={currentStep}/>
+        
       </StyledSidebar>
       <StyledRightWrapper>
         <form onSubmit={(e) => changeStep(currentStep + 1, e)}>
