@@ -11,6 +11,7 @@
   --primary_gray: hsl(231, 11%, 63%);
   --plan_card_bg: white; 
   --plan_card_bg_hover: hsl(231, 11%, 96%); 
+  --price_color:  hsl(243, 100%, 62%);
 }
 
 [data-theme="dark"] {
@@ -25,6 +26,7 @@
   --button_color_hover: hsl(231, 11%, 63%);
   --plan_card_bg: #483EFF;
   --plan_card_bg_hover: #6259FF;
+  --price_color: white;
 }
 
 body {

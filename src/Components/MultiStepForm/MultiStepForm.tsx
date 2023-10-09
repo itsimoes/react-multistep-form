@@ -34,6 +34,12 @@ const StyledSidebar = styled.div`
 `;
 const StyledRightWrapper = styled.div`
   width: 70%;
+  form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 `;
 
 const StyledIndexWrapper = styled.div`
@@ -71,8 +77,12 @@ const Wrapper = styled.div`
   border-radius: 10px;
 `;
 const FormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   padding-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   padding-left: 90px;
   padding-right: 90px;
 `;
@@ -108,15 +118,15 @@ const Button = styled.button`
 `;
 
 const StyledBackButton = styled(Button)`
-  background-color: rgba(0,0,0,0.0);
+  background-color: rgba(0, 0, 0, 0);
   color: var(--primary_gray);
   order: 2;
 
   &:hover {
     color: var(--back_button_color);
-    background-color: rgba(0,0,0,0.0);
+    background-color: rgba(0, 0, 0, 0);
   }
-`
+`;
 
 const formComponents = [<YourInfo />, <SelectPlan />, <AddOns />, <Summary />];
 

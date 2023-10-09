@@ -22,24 +22,20 @@ const YourInfo = () => {
   return (
     <>
       <h1>Personal info</h1>
-      <p>Please provide your name, email address, and phone number.</p>
-      <br />
-      <label htmlFor="name">Name</label>
-      <br />
+      <p>Please provide your name, email address, and phone number.</p>  
+      <label htmlFor="name">Name</label>  
       <StyledText
         name="name"
         placeholder="e.g. Type your name here..."
         // required
         title="This filed is required"
       />
-      <label htmlFor="email">Email Address</label>
-      <br />
+      <label htmlFor="email">Email Address</label>  
       <StyledEmail 
         name="email"
         placeholder="e.g. Type your email here..."
       />
-      <label htmlFor="phone">Phone Number</label>
-      <br />
+      <label htmlFor="phone">Phone Number</label>  
       <StyledPhone
         name="phone"            
         placeholder="e.g. +1 234 567 890"

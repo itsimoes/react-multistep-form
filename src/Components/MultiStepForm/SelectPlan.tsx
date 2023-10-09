@@ -48,9 +48,6 @@ const StyledPlanBox = styled.button`
   &:focus {
     background-color: var(--plan_card_bg_hover);
   }
-  &:target {
-    background-color: var(--plan_card_bg_hover);
-  }
 `;
 
 const SelectPlan = () => {
@@ -65,7 +62,7 @@ const SelectPlan = () => {
       <p>You have the option of monthly or yearly billing.</p>
       <br />
       <StyledPlanWrapper>
-        <StyledPlanBox className="plan_button" onClick={(e) => HandleButton(e)} formTarget="">
+        <StyledPlanBox className="plan_button" onClick={(e) => HandleButton(e)}>
           <ArcadeIcon className="IconStyle" />
           <div>
             <div className="plan_name">Arcade</div>
